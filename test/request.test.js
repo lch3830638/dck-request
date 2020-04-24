@@ -31,4 +31,21 @@ import request from '../index'
     return res
   })
   request2({ url: '/news' })
+})();
+
+// 测试customData
+(() => {
+  const request3 = request.create({ baseURL: 'https://unidemo.dcloud.net.cn/api' })
+  request3.interceptors.request.use(config => {
+    if (config.customData.a === 1) {
+      console.log('customData: success')
+    } else {
+      console.log('customData: fail')
+    }
+    return config
+  })
+  request3({
+    url: '/news',
+    customData: { a: 1 },
+  })
 })()
