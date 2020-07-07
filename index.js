@@ -1,18 +1,5 @@
-import Http from './lib/core/Http'
-
-const createInstance = (config = {}) => {
-  const context = new Http(config)
-  const instance = Http.prototype.request.bind(context)
-  Object.keys(context).forEach(val => {
-    instance[val] = context[val]
-  })
-  return instance
+if (process.env.NODE_ENV !== 'production') {
+  module.exports = require('./lib/dist/dck-request.js')
+} else {
+  module.exports = require('./lib/dist/dck-request.min.js')
 }
-
-const request = createInstance()
-
-request.create = (globalConfig) => {
-  return createInstance(globalConfig)
-}
-
-export default request

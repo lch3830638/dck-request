@@ -2,8 +2,13 @@
   "name": "dck-request",
   "version": "1.0.0",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "./lib/dist/"
+  ],
   "license": "MIT",
   "scripts": {
+    "build:lib": "webpack",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "lint": "npm run lint:js & npm run lint:style",
