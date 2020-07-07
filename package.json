@@ -4,7 +4,7 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "./libDist/*.js"
+    "libDist/"
   ],
   "license": "MIT",
   "scripts": {
