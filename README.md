@@ -4,3 +4,4 @@
 ### 注意
 + 请求头用header设置
 + 全局配置只支持baseURL和timeout
++ 不支持请求方法别名
