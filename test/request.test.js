@@ -92,4 +92,15 @@ import request from '../index'
     url: '/news',
     customData: { a: 1 },
   })
+})();
+
+// 测试请求参数
+(() => {
+  request({
+    url: '/https://unidemo.dcloud.net.cn/api',
+    params: {
+      a: null,
+      b: 3,
+    },
+  })
 })()
